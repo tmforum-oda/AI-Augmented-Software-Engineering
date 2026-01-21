@@ -4,8 +4,10 @@ This use case describes how an **AI agent skill assists developers in implementi
 
 It is based on the following assumptions:
 - The developer wants to implement a specific TM Forum Open API (e.g., TMF620, TMF629)
-- The implementation should conform to the official OpenAPI specification
+- The implementation should conform to the official OpenAPI specification 
 - The target language is Python, Node.js, or Rust
+
+**ISSUE: TM Forum Assets are currently only available behind the TMForum 'paywall' in a human-friendly (but not necessarilty Agent friendly) format - this is partly to capture download statistics. This applies to both specs and CTKs.**
 
 ---
 
@@ -99,17 +101,68 @@ tmf620-product-catalog/
 
 ## Validation
 
-The implementation should be validated against the TM Forum specification.
+The implementation should be validated against the TM Forum specification and tested using the official Compliance Test Kit (CTK).
 
 ### Validation Steps
 
 1. **Schema Compliance**: Verify generated models match TM Forum JSON Schema
 2. **Endpoint Coverage**: Ensure all required endpoints are implemented
 3. **Response Format**: Validate response structures against specification
-4. **Conformance Preparation**: Identify gaps for TM Forum Open API conformance certification
+4. **CTK Testing**: Run the official TM Forum Compliance Test Kit against the implementation
+5. **Conformance Preparation**: Identify gaps for TM Forum Open API conformance certification
+
+### Compliance Test Kit (CTK)
+
+The TM Forum provides a Compliance Test Kit (CTK) for each Open API to validate implementations against the specification.
+
+#### Downloading the CTK
+
+1. Navigate to the [TM Forum Open API Table](https://tmforum.org/oda/open-apis/table)
+2. Locate the target API (e.g., TMF620 Product Catalog Management API)
+3. Download the CTK package for the API version you are implementing
+4. The CTK typically includes:
+   - Test scripts (usually Python-based)
+   - Configuration templates
+   - Sample test data
+   - Documentation for running tests
+
+#### Running the CTK
+
+1. Configure the CTK with your implementation's base URL:
+   ```bash
+   # Example configuration
+   export API_BASE_URL=http://localhost:8080/tmf-api/productCatalogManagement/v4
+   ```
+
+2. Install CTK dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the test suite:
+   ```bash
+   python run_ctk.py --api TMF620 --version v4
+   ```
+
+4. Review the test report for:
+   - Passed/failed test cases
+   - Missing mandatory endpoints
+   - Schema validation errors
+   - Response format issues
+
+#### Interpreting CTK Results
+
+| Result | Action Required |
+|--------|-----------------|
+| PASS | Endpoint conforms to specification |
+| FAIL | Fix implementation to match spec requirements |
+| SKIP | Optional endpoint not implemented (acceptable) |
+| ERROR | Test configuration or connectivity issue |
 
 ### How to
-- The AI agent compares the implementation against the OpenAPI spec
+- The AI agent assists in downloading and configuring the CTK for the target API
+- Guides the developer through running the test suite
+- Analyzes CTK output and suggests fixes for failing tests
 - Reports any missing endpoints, incorrect data types, or schema mismatches
 - Provides guidance on achieving conformance certification
 
@@ -119,3 +172,5 @@ The implementation should be validated against the TM Forum specification.
 - [ ] Error responses follow TMF630 REST API Design Guidelines
 - [ ] HATEOAS links included where specified
 - [ ] Pagination implemented for collection resources
+- [ ] CTK test suite passes for all mandatory tests
+- [ ] Ready for formal TM Forum conformance certification submission
