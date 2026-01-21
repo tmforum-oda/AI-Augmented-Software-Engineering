@@ -5,7 +5,7 @@ This use case describes how an **AI agent skill assists developers in implementi
 It is based on the following assumptions:
 - The developer wants to implement a specific TM Forum Open API (e.g., TMF620, TMF629)
 - The implementation should conform to the official OpenAPI specification 
-- The target language is Python, Node.js, or Rust
+- The target language is Python, Node.js, Java or Rust
 
 **ISSUE: TM Forum Assets are currently only available behind the TMForum 'paywall' in a human-friendly (but not necessarilty Agent friendly) format - this is partly to capture download statistics. This applies to both specs and CTKs.**
 
