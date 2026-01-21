@@ -7,3 +7,4 @@ This use case library defines how AI agents and tools can augment software engin
 | ID | Title | Description |
 |----|-------|-------------|
 | UCSW001 | [Design Database Structure](UCSW001-Design-DB.md) | Design database structures aligned with TM Forum Information Framework and eTOM processes. |
+| UCSW002 | [Implement TM Forum Open API](UCSW002-Implement-Open-API.md) | AI-assisted implementation of TM Forum Open APIs (e.g., TMF620) in Python, Node.js, or Rust. |
