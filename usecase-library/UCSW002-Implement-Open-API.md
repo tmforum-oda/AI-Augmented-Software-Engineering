@@ -42,6 +42,7 @@ The developer selects the target programming language and the agent uses the app
 |----------|-----------|----------|
 | Python | FastAPI | Async REST APIs with automatic OpenAPI docs |
 | Node.js | Express | Lightweight, widely-adopted web framework |
+| Java | Spring Boot | Enterprise-grade REST APIs with rich ecosystem |
 | Rust | Axum | High-performance, type-safe web services |
 
 ### How to
