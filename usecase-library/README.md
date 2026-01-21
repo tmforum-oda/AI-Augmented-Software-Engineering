@@ -8,3 +8,4 @@ This use case library defines how AI agents and tools can augment software engin
 |----|-------|-------------|
 | UCSW001 | [Design Database Structure](UCSW001-Design-DB.md) | Design database structures aligned with TM Forum Information Framework and eTOM processes. |
 | UCSW002 | [Implement TM Forum Open API](UCSW002-Implement-Open-API.md) | AI-assisted implementation of TM Forum Open APIs (e.g., TMF620) in Python, Node.js, or Rust. |
+| UCSW003 | [Responsible AI Practices](UCSW003-Responsible-AI-Practices.md) | Embed Responsible AI practices into telecom software development using NIST and open source tools. |
