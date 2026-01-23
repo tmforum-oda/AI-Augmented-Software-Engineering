@@ -2,7 +2,11 @@
 
 This use case describes an **Agent Skill repository** for TM Forum Open Digital Architecture components and operators.
 
-The approach is modeled on the [Hugging Face Skills repository](https://github.com/huggingface/skills), which provides AI coding agents with domain-specific skills for ML tasks like dataset creation, model training, and evaluation. This use case adapts that pattern for TM Forum ODA development, enabling skills for Open API implementation, component design, and standards alignment.
+The approach is modeled on two example skills repositories :
+* [Hugging Face Skills repository](https://github.com/huggingface/skills) which provides AI coding agents with domain-specific skills for ML tasks like dataset creation, model training, and evaluation. 
+* [Vercel - React best practices](https://vercel.com/blog/introducing-react-best-practices) which provides best-bractice guidance on building User Interfaces using React.
+
+This use case adapts that pattern for TM Forum ODA development, enabling skills for Open API implementation, component design, and standards alignment.
 
 It is based on the following assumptions:
 - Developers use AI coding agents (Claude Code, Codex, Cursor, GitHub Copilot etc.)
